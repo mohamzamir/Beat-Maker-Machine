@@ -1,0 +1,173 @@
+/* CSS files add styling rules to your content */
+
+body {
+  font-family: helvetica, arial, sans-serif;
+  margin: 2em;
+  font-size: 15px;
+  font-style:bold;
+  background-color: black;
+  color: #D9D6CF; 
+}
+
+h1 {
+  font-family: verdana, arial, sans-serif; 
+  font-size: 50px;
+  font-style: italic;      
+  color: #FFA500;
+  
+ 
+}
+
+button {
+  padding: 10px;
+  border-radius: 10px;
+  
+}
+
+#gameButtonArea > button {
+  width:100px;
+  height:100px;
+  margin:2px;
+}
+
+#gameButtonArea1 > button {
+  width:100px;
+  height:100px;
+  margin:2px;
+}
+#gameButtonArea2 > button {
+  width:100px;
+  height:100px;
+  margin:2px;
+}
+#gameButtonArea3 > button {
+  width:100px;
+  height:100px;
+  margin:2px;
+}
+
+.hidden {
+  display: none;
+}
+
+.center {
+  margin: auto;
+  width: 50%;
+  text-align: center;
+  button: center;
+  
+}
+#button1 {
+    background: #FF007C;
+}
+
+#button2 {
+    background: blue;
+}
+#button3 {
+    background: blue;
+}
+
+#button7 {
+    background: #66FF66;
+}
+
+#button5 {
+    background: #FF007C;
+}
+
+#button6 {
+    background: blue;
+}
+
+#button4 {
+    background: #FFF700;
+}
+#button8 {
+    background: #FFF700;
+}
+#button9 {
+    background: #FF007C;
+}
+
+#button10 {
+    background: #66FF66;
+}
+
+#button11 {
+    background: #66FF66;
+}
+
+#button12 {
+    background: #FFF700;
+}
+
+#stopBtn {
+    background: #FD0E35;
+}
+#startBtn {
+    background: #00CCCC;
+}
+
+#button1:active, #button1.lit {
+    background:#FC74FD;
+  }
+
+#button2:active, #button2.lit {
+    background:#00FFFF;
+}
+
+#button3:active, #button3.lit {
+    background:#50BFE6;
+}
+
+#button4:active, #button4.lit {
+    background:#FF7A00;
+}
+
+#button5:active, #button5.lit {
+    background:#FC74FD;
+}
+
+#button6:active, #button6.lit {
+    background:#FC74FD;
+}
+
+#button7:active, #button7.lit {
+    background:#FF00CC;
+}
+
+#button8:active, #button8.lit {
+    background:#FFAA1D;
+}
+
+#button9:active, #button9.lit {
+    background:#50BFE6;
+}
+
+#button10:active, #button10.lit {
+    background:#FC74FD;
+}
+
+#button11:active, #button11.lit {
+    background:#FC74FD;
+}
+
+#button12:active, #button12.lit {
+    background:#00FFFF;
+}
+
+canvas{
+  width:100%;
+  height:100%;
+  position:absolute;
+  top:0;
+  margin:0;
+  cursor:none;
+  z-index:-1;
+  overflow-y: none;
+  overflow-x: none;
+}
+
+
+
