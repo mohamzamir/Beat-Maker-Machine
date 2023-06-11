@@ -24,3 +24,26 @@ Please follow these instructions to install the Beat Maker Machine project.
  npm install
  ```
  
+ ## Usage
+ 
+ Once installed, you can open the index.html file in your browser to start the game. Each button generates a unique sound and a light sequence that the user needs to follow in order to create a beat. The pattern is randomized at each level, making the game more challenging as you progress.
+ 
+ ## Example 
+ 
+ #### 1. When you load the page, it is visible to you like this 
+ 
+ <img width="1411" alt="Screenshot 2023-06-11 at 6 47 49 PM" src="https://github.com/mohamzamir/Beat-Maker-Machine/assets/91626899/8e7a714d-280a-4a91-931b-551b2dc77272">
+ 
+ #### 2. Select from one of the mode, click on "Start" and start matching the beats.
+ 
+ <img width="1411" alt="Screenshot 2023-06-11 at 6 49 42 PM" src="https://github.com/mohamzamir/Beat-Maker-Machine/assets/91626899/68af66f8-4a82-408e-b57b-308ce996c4e6">
+ 
+ #### 3. If you select the wrong beat, it will show you the following.
+ 
+ <img width="1412" alt="Screenshot 2023-06-11 at 6 51 03 PM" src="https://github.com/mohamzamir/Beat-Maker-Machine/assets/91626899/c1eb62f1-f921-4c8a-911f-264ada6b8e0c">
+ 
+ 
+
+
+
+
