@@ -1,76 +1,88 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <style>
+
+<head>
+  <style>
 
 
-    
-}
-</style>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>AmirHamza-SITE</title>
-    
-    <!-- import the webpage's stylesheet -->
-    <link rel="stylesheet" href="/style.css">
-    
-    <!-- import the webpage's javascript file -->
-    <script src="/script.js" defer></script>
-    <script src="/canvas.js" defer></script>
-  </head>  
-  <body>
-  
+
+  </style>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>AmirHamza-SITE</title>
+
+  <!-- import the webpage's stylesheet -->
+  <link rel="stylesheet" href="/style.css">
+
+  <!-- import the webpage's javascript file -->
+  <script src="/script.js" defer></script>
+  <script src="/canvas.js" defer></script>
+</head>
+
+<body>
+
+  <div class="center">
+    <h1>Beat Maker Machine </h1>
+    <h2>Welcome to the Light and Sound Memory Game!! </h2>
+
+    <p>
+      Follow the pattern by clicking the buttons on the Beat Maker Machine in the correct order to create some unique
+      beats every time you play
+    </p>
+
+    <div class="modeButtons">
+      <button id="easyModeBtn" class="active" onclick="changeMode('easy')">Easy</button>
+      <button id="mediumModeBtn" onclick="changeMode('medium')">Medium</button>
+      <button id="hardModeBtn" onclick="changeMode('hard')">Hard</button>
+    </div>
+
+
+    <div id="gameButtonArea">
+      <button id="button1" onclick="guess(1)" onmousedown="startTone(1)" onmouseup="stopTone()"></button>
+      <button id="button2" onclick="guess(2)" onmousedown="startTone(2)" onmouseup="stopTone()"></button>
+      <button id="button3" onclick="guess(3)" onmousedown="startTone(3)" onmouseup="stopTone()"></button>
+    </div>
+
+    <div id="gameButtonArea1">
+      <button id="button4" onclick="guess(4)" onmousedown="startTone(4)" onmouseup="stopTone()"></button>
+      <button id="button5" onclick="guess(5)" onmousedown="startTone(5)" onmouseup="stopTone()"></button>
+      <button id="button6" onclick="guess(6)" onmousedown="startTone(6)" onmouseup="stopTone()"></button>
+    </div>
+
+    <div id="gameButtonArea2">
+      <button id="button7" onclick="guess(7)" onmousedown="startTone(7)" onmouseup="stopTone()"></button>
+      <button id="button8" onclick="guess(8)" onmousedown="startTone(8)" onmouseup="stopTone()"></button>
+      <button id="button9" onclick="guess(9)" onmousedown="startTone(9)" onmouseup="stopTone()"></button>
+    </div>
+
+    <div id="gameButtonArea3">
+      <button id="button10" onclick="guess(10)" onmousedown="startTone(10)" onmouseup="stopTone()"></button>
+      <button id="button11" onclick="guess(11)" onmousedown="startTone(11)" onmouseup="stopTone()"></button>
+      <button id="button12" onclick="guess(12)" onmousedown="startTone(12)" onmouseup="stopTone()"></button>
+    </div>
+
     <div class="center">
-      <h1>Beat Maker Machine </h1>
-      <h2>Welcome to the Light and Sound Memory Game!! </h2>
-
-      <p>
-         Follow the pattern by clicking the buttons on the Beat Maker Machine in the correct order to create some unique beats every time you play
-      </p>
-
-
-      <div id="gameButtonArea">
-        <button id="button1" onclick="guess(1)" onmousedown="startTone(1)" onmouseup="stopTone()"></button>
-        <button id="button2" onclick="guess(2)" onmousedown="startTone(2)" onmouseup="stopTone()"></button>
-        <button id="button3" onclick="guess(3)" onmousedown="startTone(3)" onmouseup="stopTone()"></button>
-      </div>
-      
-      <div id="gameButtonArea1" >
-        <button id="button4" onclick="guess(4)" onmousedown="startTone(4)" onmouseup="stopTone()"></button>
-        <button id="button5" onclick="guess(5)" onmousedown="startTone(5)" onmouseup="stopTone()"></button>
-        <button id="button6" onclick="guess(6)" onmousedown="startTone(6)" onmouseup="stopTone()"></button>
-      </div>
-      
-      <div id="gameButtonArea2" >
-        <button id="button7" onclick="guess(7)" onmousedown="startTone(7)" onmouseup="stopTone()"></button>
-        <button id="button8" onclick="guess(8)" onmousedown="startTone(8)" onmouseup="stopTone()"></button>
-        <button id="button9" onclick="guess(9)" onmousedown="startTone(9)" onmouseup="stopTone()"></button>
-      </div>
-      
-      <div id="gameButtonArea3" >
-        <button id="button10" onclick="guess(10)" onmousedown="startTone(10)" onmouseup="stopTone()"></button>
-        <button id="button11" onclick="guess(11)" onmousedown="startTone(11)" onmouseup="stopTone()"></button>
-        <button id="button12" onclick="guess(12)" onmousedown="startTone(12)" onmouseup="stopTone()"></button>
-      </div>
-
-      <div class="center">
       <button id="startBtn" onclick="startGame()">
         Start
       </button>
       <button id="stopBtn" class="hidden" onclick="stopGame()">
         Stop
       </button>
-      </div>
     </div>
-    <!-- where our canvas goes -->
-    <div id="game-wrapper" ></div>
+    <div class="score">
+      Score: <span id="score">0</span>
+    </div>
+  </div>
+  <!-- where our canvas goes -->
+  <div id="game-wrapper"></div>
 
-<!-- where our music comes from -->
-<!-- DKC2 - Bramble Blast  -->
- <!-- <iframe width="560" height="315" src="https://www.youtube.com/embed/73n7HTcmb5g?autoplay=1" frameborder="0" allowfullscreen style="display:none"></iframe>
+  <!-- where our music comes from -->
+  <!-- DKC2 - Bramble Blast  -->
+  <!-- <iframe width="560" height="315" src="https://www.youtube.com/embed/73n7HTcmb5g?autoplay=1" frameborder="0" allowfullscreen style="display:none"></iframe>
    <script src="https://button.glitch.me/button.js" defer></script> -->
-  </body>
-</html>
+</body>
 
+</html>
