@@ -1,62 +1,123 @@
 /* CSS files add styling rules to your content */
 
+
+
+
+.modeButtons {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.modeButtons button {
+    padding: 10px;
+    margin: 0 5px;
+}
+
+.modeButtons button.active {
+    background-color: #FFA500;
+    color: #FFFFFF;
+}
+
+
 body {
-  font-family: helvetica, arial, sans-serif;
-  margin: 2em;
-  font-size: 15px;
-  font-style:bold;
-  background-color: black;
-  color: #D9D6CF; 
+    font-family: helvetica, arial, sans-serif;
+    margin: 2em;
+    font-size: 15px;
+    font-style: bold;
+    background-color: black;
+    color: #D9D6CF;
 }
 
 h1 {
-  font-family: verdana, arial, sans-serif; 
-  font-size: 50px;
-  font-style: italic;      
-  color: #FFA500;
-  
- 
+    font-family: verdana, arial, sans-serif;
+    font-size: 50px;
+    font-style: italic;
+    color: #FFA500;
+
+
+}
+
+@keyframes breathe {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.1);
+    }
+
+    100% {
+        transform: scale(1);
+    }
 }
 
 button {
-  padding: 10px;
-  border-radius: 10px;
-  
+    padding: 10px;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+    font-size: 18px;
+    transition: all 0.5s ease;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+    animation: breathe 2s infinite ease-in-out;
 }
 
-#gameButtonArea > button {
-  width:100px;
-  height:100px;
-  margin:2px;
+button:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.4);
 }
 
-#gameButtonArea1 > button {
-  width:100px;
-  height:100px;
-  margin:2px;
+button:active {
+    transform: scale(0.95);
 }
-#gameButtonArea2 > button {
-  width:100px;
-  height:100px;
-  margin:2px;
+
+
+button:active {
+    transform: scale(0.9);
+    /* Changes the box-shadow to give a pressed effect */
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+    /* Changes the background color to make it look more highlighted */
+    background-color: #dddddd;
 }
-#gameButtonArea3 > button {
-  width:100px;
-  height:100px;
-  margin:2px;
+
+#gameButtonArea>button {
+    width: 100px;
+    height: 100px;
+    margin: 2px;
+    color: white transition: background-color 0.3s ease;
+}
+
+#gameButtonArea1>button {
+    width: 100px;
+    height: 100px;
+    margin: 2px;
+}
+
+#gameButtonArea2>button {
+    width: 100px;
+    height: 100px;
+    margin: 2px;
+}
+
+#gameButtonArea3>button {
+    width: 100px;
+    height: 100px;
+    margin: 2px;
 }
 
 .hidden {
-  display: none;
+    display: none;
 }
 
 .center {
-  margin: auto;
-  width: 50%;
-  text-align: center;
-  button: center;
-  
+    margin: auto;
+    width: 50%;
+    text-align: center;
+    button: center;
+
 }
+
 #button1 {
     background: #FF007C;
 }
@@ -64,6 +125,7 @@ button {
 #button2 {
     background: blue;
 }
+
 #button3 {
     background: blue;
 }
@@ -83,9 +145,11 @@ button {
 #button4 {
     background: #FFF700;
 }
+
 #button8 {
     background: #FFF700;
 }
+
 #button9 {
     background: #FF007C;
 }
@@ -105,69 +169,210 @@ button {
 #stopBtn {
     background: #FD0E35;
 }
+
 #startBtn {
     background: #00CCCC;
 }
 
-#button1:active, #button1.lit {
-    background:#FC74FD;
+#button1:active,
+#button1.lit {
+    background: #FC74FD;
+}
+
+#button2:active,
+#button2.lit {
+    background: #00FFFF;
+}
+
+#button3:active,
+#button3.lit {
+    background: #50BFE6;
+}
+
+#button4:active,
+#button4.lit {
+    background: #FF7A00;
+}
+
+#button5:active,
+#button5.lit {
+    background: #FC74FD;
+}
+
+#button6:active,
+#button6.lit {
+    background: #FC74FD;
+}
+
+#button7:active,
+#button7.lit {
+    background: #FF00CC;
+}
+
+#button8:active,
+#button8.lit {
+    background: #FFAA1D;
+}
+
+#button9:active,
+#button9.lit {
+    background: #50BFE6;
+}
+
+#button10:active,
+#button10.lit {
+    background: #FC74FD;
+}
+
+#button11:active,
+#button11.lit {
+    background: #FC74FD;
+}
+
+#button12:active,
+#button12.lit {
+    background: #00FFFF;
+}
+
+canvas {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    margin: 0;
+    cursor: none;
+    z-index: -1;
+    overflow-y: none;
+    overflow-x: none;
+}
+
+.score {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+.container {
+    font-family: 'Arial', sans-serif;
+    text-align: center;
+    margin: 2em;
   }
-
-#button2:active, #button2.lit {
-    background:#00FFFF;
-}
-
-#button3:active, #button3.lit {
-    background:#50BFE6;
-}
-
-#button4:active, #button4.lit {
-    background:#FF7A00;
-}
-
-#button5:active, #button5.lit {
-    background:#FC74FD;
-}
-
-#button6:active, #button6.lit {
-    background:#FC74FD;
-}
-
-#button7:active, #button7.lit {
-    background:#FF00CC;
-}
-
-#button8:active, #button8.lit {
-    background:#FFAA1D;
-}
-
-#button9:active, #button9.lit {
-    background:#50BFE6;
-}
-
-#button10:active, #button10.lit {
-    background:#FC74FD;
-}
-
-#button11:active, #button11.lit {
-    background:#FC74FD;
-}
-
-#button12:active, #button12.lit {
-    background:#00FFFF;
-}
-
-canvas{
-  width:100%;
-  height:100%;
-  position:absolute;
-  top:0;
-  margin:0;
-  cursor:none;
-  z-index:-1;
-  overflow-y: none;
-  overflow-x: none;
-}
-
-
-
+  
+  h1 {
+    font-size: 50px;
+    font-weight: bold;
+    color: #FFA500;
+  }
+  
+  .button-area {
+    display: flex;
+    justify-content: center;
+    margin: 1em;
+  }
+  
+  .game-button {
+    width: 100px;
+    height: 100px;
+    margin: 5px;
+    font-size: 18px;
+    border-radius: 50%;
+    background-color: #FFF;
+    border: none;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+    cursor: pointer;
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+  }
+  
+  .game-button:active {
+    transform: scale(0.95);
+  }
+  
+  .game-button.correct {
+    background-color: #00FF00;
+    box-shadow: 0 2px 8px rgba(0, 255, 0, 0.8);
+  }
+  
+  .game-button.wrong {
+    background-color: #FF0000;
+    box-shadow: 0 2px 8px rgba(255, 0, 0, 0.8);
+    animation: shake 0.4s linear;
+  }
+  
+  @keyframes shake {
+    0% {
+      transform: translateX(0);
+    }
+    25% {
+      transform: translateX(-5px);
+    }
+    50% {
+      transform: translateX(5px);
+    }
+    75% {
+      transform: translateX(-5px);
+    }
+     100% {
+      transform: translateX(0);
+    }
+  }
+  
+  .game-control {
+    padding: 10px 20px;
+    font-size: 18px;
+    border-radius: 30px;
+    background-color: #007BFF;
+    color: #FFF;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.2s ease-in-out;
+  }
+  
+  .game-control:hover {
+    background-color: #0056b3;
+  }
+  
+  .game-control:active {
+    transform: scale(0.95);
+  }
+  
+  .game-control.hidden {
+    display: none;
+  }
+  
+  #scoreBoard {
+    margin-top: 1em;
+    font-size: 20px;
+  }
+  
+  #modeSelector {
+    margin-top: 1em;
+  }
+  
+  .mode-button {
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 30px;
+    background-color: #FFF;
+    color: #007BFF;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+  }
+  
+  .mode-button.selected {
+    background-color: #007BFF;
+    color: #FFF;
+  }
+  
+  .mode-button:hover {
+    background-color: #0056b3;
+    color: #FFF;
+  }
+  
+  #easyModeBtn {
+    margin-right: 10px;
+  }
+  
+  #hardModeBtn {
+    margin-left: 10px;
+  }
+  
