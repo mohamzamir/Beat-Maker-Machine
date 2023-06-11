@@ -44,7 +44,7 @@ Please follow these instructions to install the Beat Maker Machine project.
  
  ## License
  ```bash
- Copyright [2023] [Amir Hamza]
+ Copyright [2022] [Amir Hamza]
 
  Licensed under the Apache License, Version 2.0 (the "License");
  you may not use this file except in compliance with the License.
